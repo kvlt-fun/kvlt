@@ -1,0 +1,23 @@
+[workspace]
+resolver = "2"
+members = [
+    "libs/inkd_math",
+    "cli",
+]
+exclude = ["programs/inkd_core"]
+
+[workspace.package]
+version = "0.5.2"
+edition = "2021"
+license = "MIT"
+authors = ["inkd-labs <dev@inkd.fun>"]
+repository = "https://github.com/inkd-labs/inkd"
+
+[workspace.dependencies]
+thiserror = "1.0"
+bytemuck = { version = "1.14", features = ["derive"] }
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
