@@ -1,0 +1,19 @@
+{
+  "name": "inkd-workspace",
+  "private": true,
+  "version": "0.5.2",
+  "description": "Soulbound attestation protocol on Solana. Compressed, non-transferable on-chain proofs for identity, merit, and credentials.",
+  "workspaces": [
+    "sdk"
+  ],
+  "scripts": {
+    "test": "npm --workspace sdk test",
+    "build": "npm --workspace sdk run build",
+    "lint": "npm --workspace sdk run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inkd-labs/inkd.git"
+  },
+  "license": "MIT"
+}
