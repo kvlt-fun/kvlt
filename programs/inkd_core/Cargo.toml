@@ -1,0 +1,26 @@
+[package]
+name = "inkd_core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Inkd core on-chain program for soulbound attestations."
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "inkd_core"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+solana-program = { workspace = true }
+thiserror = { workspace = true }
+bytemuck = { workspace = true }
+inkd_math = { path = "../../libs/inkd_math" }
